@@ -1,2 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.main {
+  height: 100vh;
+  background-color: #93b8ca;
+}
+.head {
+  position: relative;
+  width: 420px;
+  height: 400px;
+  border: 2px solid #06090c;
+  margin: 0px auto;
+  border-radius: 50% 50% 45% 45%;
+  background-color: #1e90ff;
+}
+.head .face {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 360px;
+  height: 300px;
+  border: 2px solid #06090c;
+  border-radius: 50% 50% 45% 45%;
+  background-color: #ffffff;
+  transform: translateX(-50%);
+}
+
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
