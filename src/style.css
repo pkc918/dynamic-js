@@ -31,3 +31,57 @@
   background-color: #ffffff;
   transform: translateX(-50%);
 }
+.head .collar {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 50px;
+  border: 2px solid #06090c;
+  border-radius: 25px;
+  background-color: #ff0000;
+}
+.head .collar .bells {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #06090c;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-color: #ffff00;
+  overflow: hidden;
+}
+.head .collar .bells::before {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 8px;
+  border: 2px solid #06090c;
+  position: absolute;
+  top: 25%;
+  left: -5px;
+}
+.head .collar .bells::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 10px;
+  background-color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50% 45% 50% 45%;
+}
+.head .collar .bells .crack {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background-color: #000000;
+}
