@@ -7,12 +7,8 @@
 *::after {
   box-sizing: border-box;
 }
-.text {
-  height: 50vh;
-  overflow: auto;
-}
 .main {
-  height: 50vh;
+  height: 100vh;
   background-color: #93b8ca;
   border-top: 1px solid #ccc;
 }
@@ -21,7 +17,7 @@
   width: 420px;
   height: 400px;
   border: 2px solid #06090c;
-  margin: 20px auto;
+  margin: 10px auto;
   border-radius: 50% 50% 45% 45%;
   background-color: #1e90ff;
 }
@@ -89,4 +85,39 @@
   width: 2px;
   height: 20px;
   background-color: #000000;
+}
+.eye {
+  position: absolute;
+  left: 50%;
+  top: -45px;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 110px;
+  display: flex;
+}
+.eye::before,
+.eye::after {
+  content: '';
+  display: block;
+  width: 50%;
+  border-radius: 45% 45% 50% 50%;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+.eye .eyeball::before,
+.eye .eyeball::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+}
+.eye .eyeball::before {
+  left: 60px;
+}
+.eye .eyeball::after {
+  right: 60px;
 }
