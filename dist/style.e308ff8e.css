@@ -171,11 +171,31 @@
   top: 30px;
   left: 5px;
 }
-
 .whisker_right {
   transform: rotateY(180deg);
   position: absolute;
   left: 60%;
+}
+.mouth {
+  width: 240px;
+  height: 200px;
+  border-bottom: 2px solid #000;
+  position: absolute;
+  bottom: 24%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 45% 45%;
+}
+.mouth::before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 130px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
