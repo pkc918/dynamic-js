@@ -7,6 +7,9 @@
 *::after {
   box-sizing: border-box;
 }
+body {
+  overflow-y: scroll;
+}
 .main {
   height: 100vh;
   background-color: #93b8ca;
@@ -43,6 +46,7 @@
   border-radius: 25px;
   background-color: #ff0000;
 }
+
 .head .collar .bells {
   position: absolute;
   top: 40%;
@@ -50,6 +54,7 @@
   width: 60px;
   height: 60px;
   border: 2px solid #06090c;
+  animation: moving 2.2s infinite linear;
   border-radius: 50%;
   transform: translateX(-50%);
   background-color: #ffff00;
@@ -196,6 +201,14 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+@keyframes moving {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
 }
 
 
