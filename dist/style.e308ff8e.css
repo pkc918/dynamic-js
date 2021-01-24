@@ -143,6 +143,40 @@
   right: 5px;
   border-radius: 50%;
 }
+.whisker_style {
+  width: 100px;
+  border-top: 2px solid #000;
+}
+.whisker_style::before,
+.whisker_style::after {
+  display: block;
+  content: '';
+  width: 100px;
+  border-top: 2px solid #000;
+}
+.whisker_style {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+.whisker_style::before {
+  transform: rotate(15deg);
+  position: absolute;
+  top: -30px;
+  left: 5px;
+}
+.whisker_style::after {
+  transform: rotate(-15deg);
+  position: absolute;
+  top: 30px;
+  left: 5px;
+}
+
+.whisker_right {
+  transform: rotateY(180deg);
+  position: absolute;
+  left: 60%;
+}
 
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
