@@ -32,10 +32,32 @@
       .test::-webkit-scrollbar {
         display: none;
       }
+      .buttons {
+        position: fixed;
+        top: 0;
+        right: 20px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 2px solid #0d7b3d;
+        border-radius: 10px;
+        color: #0d7b3d;
+      }
     </style>
   </head>
   <body>
     <style class="style"></style>
+    <div class="buttons">
+      <button id="btnPause">暂停</button>
+      <button id="btnPlay">播放</button>
+      <button id="btnSlow">慢速</button>
+      <button id="btnNormal">正常</button>
+      <button id="btnFast">快速</button>
+    </div>
     <div class="test"></div>
     <div class="main">
       <div class="head">
