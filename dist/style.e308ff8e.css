@@ -1,17 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-body {
-  overflow-y: scroll;
-}
 .main {
-  height: 100vh;
+  height: 50vh;
   background-color: #93b8ca;
   border-top: 1px solid #ccc;
 }

@@ -7,10 +7,36 @@
       content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
     />
     <title>蓝胖子啊</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        overflow-y: scroll;
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      .test {
+        height: 50vh;
+        padding-left: 10px;
+        overflow-y: auto;
+        font-size: 14px;
+      }
+      .test::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <div class="text"></div>
+    <style class="style"></style>
+    <div class="test"></div>
     <div class="main">
       <div class="head">
         <div class="face">

@@ -117,34 +117,74 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"main.js":[function(require,module,exports) {
-var cssString = "\n.main {\n  height: 50vh;\n  background-color: #93b8ca;\n  border-top: 1px solid #ccc;\n}\n.head {\n  position: relative;\n  width: 420px;\n  height: 400px;\n  border: 2px solid #06090c;\n  margin: 10px auto;\n  border-radius: 50% 50% 45% 45%;\n  background-color: #1e90ff;\n}\n.head .face {\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  width: 360px;\n  height: 300px;\n  border: 2px solid #06090c;\n  border-radius: 50% 50% 45% 45%;\n  background-color: #ffffff;\n  transform: translateX(-50%);\n}\n.head .collar {\n  position: absolute;\n  bottom: -10px;\n  left: 50%;\n  transform: translateX(-50%);\n  width: 320px;\n  height: 50px;\n  border: 2px solid #06090c;\n  border-radius: 25px;\n  background-color: #ff0000;\n}\n.head .collar .bells {\n  position: absolute;\n  top: 40%;\n  left: 50%;\n  width: 60px;\n  height: 60px;\n  border: 2px solid #06090c;\n  animation: moving 2.2s infinite linear;\n  border-radius: 50%;\n  transform: translateX(-50%);\n  background-color: #ffff00;\n  overflow: hidden;\n}\n.head .collar .bells::before {\n  content: '';\n  display: block;\n  width: 70px;\n  height: 8px;\n  border: 2px solid #06090c;\n  position: absolute;\n  top: 25%;\n  left: -5px;\n}\n.head .collar .bells::after {\n  content: '';\n  display: block;\n  width: 15px;\n  height: 10px;\n  background-color: #000000;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translateX(-50%);\n  border-radius: 50% 45% 50% 45%;\n}\n.head .collar .bells .crack {\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  width: 2px;\n  height: 20px;\n  background-color: #000000;\n}\n.eye {\n  position: absolute;\n  left: 50%;\n  top: -45px;\n  transform: translateX(-50%);\n  width: 180px;\n  height: 110px;\n  display: flex;\n}\n.eye::before,\n.eye::after {\n  content: '';\n  display: block;\n  width: 50%;\n  border-radius: 45% 45% 50% 50%;\n  background-color: #fff;\n  border: 2px solid #000;\n}\n.eye .eyeball::before,\n.eye .eyeball::after {\n  content: '';\n  display: block;\n  width: 20px;\n  height: 20px;\n  background-color: #000000;\n  border-radius: 50%;\n  position: absolute;\n  top: 50%;\n}\n.eye .eyeball::before {\n  left: 60px;\n}\n.eye .eyeball::after {\n  right: 60px;\n}\n.face .nose {\n  position: absolute;\n  top: 15%;\n  left: 50%;\n  transform: translateX(-50%);\n  width: 50px;\n  height: 50px;\n  border: 2px solid #000;\n  border-radius: 50%;\n  background-color: #ff0000;\n}\n.face .nose::before {\n  content: '';\n  display: block;\n  width: 15px;\n  height: 15px;\n  background-color: #fff;\n  position: absolute;\n  top: 20%;\n  right: 5px;\n  border-radius: 50%;\n}\n.whisker_style {\n  width: 100px;\n  border-top: 2px solid #000;\n}\n.whisker_style::before,\n.whisker_style::after {\n  display: block;\n  content: '';\n  width: 100px;\n  border-top: 2px solid #000;\n}\n.whisker_style {\n  position: absolute;\n  top: 40%;\n  left: 10%;\n}\n.whisker_style::before {\n  transform: rotate(15deg);\n  position: absolute;\n  top: -30px;\n  left: 5px;\n}\n.whisker_style::after {\n  transform: rotate(-15deg);\n  position: absolute;\n  top: 30px;\n  left: 5px;\n}\n.whisker_right {\n  transform: rotateY(180deg);\n  position: absolute;\n  left: 60%;\n}\n.mouth {\n  width: 240px;\n  height: 200px;\n  border-bottom: 2px solid #000;\n  position: absolute;\n  bottom: 24%;\n  left: 50%;\n  transform: translateX(-50%);\n  border-radius: 0 0 45% 45%;\n}\n.mouth::before {\n  content: '';\n  display: block;\n  width: 2px;\n  height: 130px;\n  background-color: #000;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n@keyframes moving {\n  0% {\n    transform: translateX(-50%) rotate(0deg);\n  }\n  100% {\n    transform: translateX(-50%) rotate(360deg);\n  }\n}\n";
-var style = document.querySelector('.style');
-var test = document.querySelector('.test');
-var n = 1;
-var styleString = '';
-var timer = setInterval(function () {
-  n += 1;
+})({"../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-  if (n == cssString.length) {
-    console.log(111111111111);
-    window.clearInterval(timer);
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
     return;
   }
 
-  if (cssString[n] === '\n') {
-    styleString += '<br>';
-  } else if (cssString[n] === ' ') {
-    styleString += '&nbsp;';
-  } else {
-    styleString += cssString[n];
-  }
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
 
-  test.innerHTML = styleString;
-  style.innerHTML = cssString.substring(0, n);
-  test.scrollTop = test.scrollHeight;
-}, 0);
-},{}],"../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/bundle-url.js"}],"../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -348,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js","main.js"], null)
-//# sourceMappingURL=/main.1f19ae8e.js.map
+},{}]},{},["../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/index.js.map
