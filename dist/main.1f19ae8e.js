@@ -118,32 +118,78 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-var cssString = "\n/* \n\u8BA9\u6211\u4EEC\u4E00\u8D77\u770B\u770B\u84DD\u80D6\u5B50\u7684\u8BDE\u751F\u5427\uFF01\n\u9996\u5148\u7ED9\u84DD\u80D6\u5B50\u4E00\u4E2A\u5BB6\u3002\n*/\n.main {\n  height: 50vh;\n  background-color: #93b8ca;\n  border-top: 1px solid #ccc;\n}\n/* \n\u770B\uFF0C\u770B\u89C1\u5934\u5566\uFF01\n*/\n.head {\n  position: relative;\n  width: 420px;\n  height: 400px;\n  border: 2px solid #06090c;\n  margin: 10px auto;\n  border-radius: 50% 50% 45% 45%;\n  background-color: #1e90ff;\n}\n/* \n\u54C7\uFF0C\u8138\u4E5F\u5FEB\u51FA\u6765\u4E86\uFF01\n*/\n.head .face {\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  width: 360px;\n  height: 300px;\n  border: 2px solid #06090c;\n  border-radius: 50% 50% 45% 45%;\n  background-color: #ffffff;\n  transform: translateX(-50%);\n}\n/* \n\u54BF\uFF0C\u600E\u4E48\u770B\u89C1\u7684\u662F\u56F4\u5DFE\u554A\uFF01\n*/\n.head .collar {\n  position: absolute;\n  bottom: -10px;\n  left: 50%;\n  transform: translateX(-50%);\n  width: 320px;\n  height: 50px;\n  border: 2px solid #06090c;\n  border-radius: 25px;\n  background-color: #ff0000;\n}\n/* \n\u554A\uFF0C\u539F\u6765\u662F\u94C3\u94DB\u554A\uFF01\n*/\n.head .collar .bells {\n  position: absolute;\n  top: 40%;\n  left: 50%;\n  width: 60px;\n  height: 60px;\n  border: 2px solid #06090c;\n  animation: moving 2.2s infinite linear;\n  border-radius: 50%;\n  transform: translateX(-50%);\n  background-color: #ffff00;\n  overflow: hidden;\n}\n.head .collar .bells::before {\n  content: '';\n  display: block;\n  width: 70px;\n  height: 8px;\n  border: 2px solid #06090c;\n  position: absolute;\n  top: 25%;\n  left: -5px;\n}\n.head .collar .bells::after {\n  content: '';\n  display: block;\n  width: 15px;\n  height: 10px;\n  background-color: #000000;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translateX(-50%);\n  border-radius: 50% 45% 50% 45%;\n}\n.head .collar .bells .crack {\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  width: 2px;\n  height: 20px;\n  background-color: #000000;\n}\n/* \u3001\n\u54C7\uFF0C\u7EC8\u4E8E\u770B\u89C1\u773C\u775B\u4E86\uFF01\n*/\n.eye {\n  position: absolute;\n  left: 50%;\n  top: -45px;\n  transform: translateX(-50%);\n  width: 180px;\n  height: 110px;\n  display: flex;\n}\n.eye::before,\n.eye::after {\n  content: '';\n  display: block;\n  width: 50%;\n  border-radius: 45% 45% 50% 50%;\n  background-color: #fff;\n  border: 2px solid #000;\n}\n.eye .eyeball::before,\n.eye .eyeball::after {\n  content: '';\n  display: block;\n  width: 20px;\n  height: 20px;\n  background-color: #000000;\n  border-radius: 50%;\n  position: absolute;\n  top: 50%;\n}\n.eye .eyeball::before {\n  left: 60px;\n}\n.eye .eyeball::after {\n  right: 60px;\n}\n/* \n\u54C8\uFF0C\u8FD9\u662F\u9F3B\u5B50\u554A\uFF01\n*/\n.face .nose {\n  position: absolute;\n  top: 15%;\n  left: 50%;\n  transform: translateX(-50%);\n  width: 50px;\n  height: 50px;\n  border: 2px solid #000;\n  border-radius: 50%;\n  background-color: #ff0000;\n}\n.face .nose::before {\n  content: '';\n  display: block;\n  width: 15px;\n  height: 15px;\n  background-color: #fff;\n  position: absolute;\n  top: 20%;\n  right: 5px;\n  border-radius: 50%;\n}\n/* \n\u54DF\uFF0C\u8FD9\u662F\u80E1\u987B\u5417\uFF01\n*/\n.whisker_style {\n  width: 100px;\n  border-top: 2px solid #000;\n}\n.whisker_style::before,\n.whisker_style::after {\n  display: block;\n  content: '';\n  width: 100px;\n  border-top: 2px solid #000;\n}\n.whisker_style {\n  position: absolute;\n  top: 40%;\n  left: 10%;\n}\n.whisker_style::before {\n  transform: rotate(15deg);\n  position: absolute;\n  top: -30px;\n  left: 5px;\n}\n.whisker_style::after {\n  transform: rotate(-15deg);\n  position: absolute;\n  top: 30px;\n  left: 5px;\n}\n.whisker_right {\n  transform: rotateY(180deg);\n  position: absolute;\n  left: 60%;\n}\n/* \n\u5662\uFF0C\u5634\u5DF4\u4E5F\u6709\u4E86\n*/\n.mouth {\n  width: 240px;\n  height: 200px;\n  border-bottom: 2px solid #000;\n  position: absolute;\n  bottom: 24%;\n  left: 50%;\n  transform: translateX(-50%);\n  border-radius: 0 0 45% 45%;\n}\n.mouth::before {\n  content: '';\n  display: block;\n  width: 2px;\n  height: 130px;\n  background-color: #000;\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n}\n/* \n\u6700\u540E\uFF0C\u8BA9\u6211\u7684\u94C3\u94DB\u52A8\u8D77\u6765\u5427\uFF01\n*/\n@keyframes moving {\n  0% {\n    transform: translateX(-50%) rotate(0deg);\n  }\n  100% {\n    transform: translateX(-50%) rotate(360deg);\n  }\n}\n/* \n\u4F60\u597D\u554A\uFF01\u6211\u662F\u84DD\u80D6\u5B50\uFF01\n*/\n";
-var style = document.querySelector('.style');
-var test = document.querySelector('.test');
-var n = 1;
-var styleString = '';
-var timer = setInterval(function () {
-  n += 1;
+var player = {
+  cssString: "\n    /* \n    \u8BA9\u6211\u4EEC\u4E00\u8D77\u770B\u770B\u84DD\u80D6\u5B50\u7684\u8BDE\u751F\u5427\uFF01\n    \u9996\u5148\u7ED9\u84DD\u80D6\u5B50\u4E00\u4E2A\u5BB6\u3002\n    */\n    .main {\n      height: 50vh;\n      background-color: #93b8ca;\n      border-top: 1px solid #ccc;\n    }\n    /* \n    \u770B\uFF0C\u770B\u89C1\u5934\u5566\uFF01\n    */\n    .head {\n      position: relative;\n      width: 420px;\n      height: 400px;\n      border: 2px solid #06090c;\n      margin: 10px auto;\n      border-radius: 50% 50% 45% 45%;\n      background-color: #1e90ff;\n    }\n    /* \n    \u54C7\uFF0C\u8138\u4E5F\u5FEB\u51FA\u6765\u4E86\uFF01\n    */\n    .head .face {\n      position: absolute;\n      bottom: 0;\n      left: 50%;\n      width: 360px;\n      height: 300px;\n      border: 2px solid #06090c;\n      border-radius: 50% 50% 45% 45%;\n      background-color: #ffffff;\n      transform: translateX(-50%);\n    }\n    /* \n    \u54BF\uFF0C\u600E\u4E48\u770B\u89C1\u7684\u662F\u56F4\u5DFE\u554A\uFF01\n    */\n    .head .collar {\n      position: absolute;\n      bottom: -10px;\n      left: 50%;\n      transform: translateX(-50%);\n      width: 320px;\n      height: 50px;\n      border: 2px solid #06090c;\n      border-radius: 25px;\n      background-color: #ff0000;\n    }\n    /* \n    \u554A\uFF0C\u539F\u6765\u662F\u94C3\u94DB\u554A\uFF01\n    */\n    .head .collar .bells {\n      position: absolute;\n      top: 40%;\n      left: 50%;\n      width: 60px;\n      height: 60px;\n      border: 2px solid #06090c;\n      animation: moving 2.2s infinite linear;\n      border-radius: 50%;\n      transform: translateX(-50%);\n      background-color: #ffff00;\n      overflow: hidden;\n    }\n    .head .collar .bells::before {\n      content: '';\n      display: block;\n      width: 70px;\n      height: 8px;\n      border: 2px solid #06090c;\n      position: absolute;\n      top: 25%;\n      left: -5px;\n    }\n    .head .collar .bells::after {\n      content: '';\n      display: block;\n      width: 15px;\n      height: 10px;\n      background-color: #000000;\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translateX(-50%);\n      border-radius: 50% 45% 50% 45%;\n    }\n    .head .collar .bells .crack {\n      position: absolute;\n      bottom: 0;\n      left: 50%;\n      transform: translateX(-50%);\n      width: 2px;\n      height: 20px;\n      background-color: #000000;\n    }\n    /* \u3001\n    \u54C7\uFF0C\u7EC8\u4E8E\u770B\u89C1\u773C\u775B\u4E86\uFF01\n    */\n    .eye {\n      position: absolute;\n      left: 50%;\n      top: -45px;\n      transform: translateX(-50%);\n      width: 180px;\n      height: 110px;\n      display: flex;\n    }\n    .eye::before,\n    .eye::after {\n      content: '';\n      display: block;\n      width: 50%;\n      border-radius: 45% 45% 50% 50%;\n      background-color: #fff;\n      border: 2px solid #000;\n    }\n    .eye .eyeball::before,\n    .eye .eyeball::after {\n      content: '';\n      display: block;\n      width: 20px;\n      height: 20px;\n      background-color: #000000;\n      border-radius: 50%;\n      position: absolute;\n      top: 50%;\n    }\n    .eye .eyeball::before {\n      left: 60px;\n    }\n    .eye .eyeball::after {\n      right: 60px;\n    }\n    /* \n    \u54C8\uFF0C\u8FD9\u662F\u9F3B\u5B50\u554A\uFF01\n    */\n    .face .nose {\n      position: absolute;\n      top: 15%;\n      left: 50%;\n      transform: translateX(-50%);\n      width: 50px;\n      height: 50px;\n      border: 2px solid #000;\n      border-radius: 50%;\n      background-color: #ff0000;\n    }\n    .face .nose::before {\n      content: '';\n      display: block;\n      width: 15px;\n      height: 15px;\n      background-color: #fff;\n      position: absolute;\n      top: 20%;\n      right: 5px;\n      border-radius: 50%;\n    }\n    /* \n    \u54DF\uFF0C\u8FD9\u662F\u80E1\u987B\u5417\uFF01\n    */\n    .whisker_style {\n      width: 100px;\n      border-top: 2px solid #000;\n    }\n    .whisker_style::before,\n    .whisker_style::after {\n      display: block;\n      content: '';\n      width: 100px;\n      border-top: 2px solid #000;\n    }\n    .whisker_style {\n      position: absolute;\n      top: 40%;\n      left: 10%;\n    }\n    .whisker_style::before {\n      transform: rotate(15deg);\n      position: absolute;\n      top: -30px;\n      left: 5px;\n    }\n    .whisker_style::after {\n      transform: rotate(-15deg);\n      position: absolute;\n      top: 30px;\n      left: 5px;\n    }\n    .whisker_right {\n      transform: rotateY(180deg);\n      position: absolute;\n      left: 60%;\n    }\n    /* \n    \u5662\uFF0C\u5634\u5DF4\u4E5F\u6709\u4E86\n    */\n    .mouth {\n      width: 240px;\n      height: 200px;\n      border-bottom: 2px solid #000;\n      position: absolute;\n      bottom: 24%;\n      left: 50%;\n      transform: translateX(-50%);\n      border-radius: 0 0 45% 45%;\n    }\n    .mouth::before {\n      content: '';\n      display: block;\n      width: 2px;\n      height: 130px;\n      background-color: #000;\n      position: absolute;\n      bottom: 0;\n      left: 50%;\n      transform: translateX(-50%);\n    }\n    /* \n    \u6700\u540E\uFF0C\u8BA9\u6211\u7684\u94C3\u94DB\u52A8\u8D77\u6765\u5427\uFF01\n    */\n    @keyframes moving {\n      0% {\n        transform: translateX(-50%) rotate(0deg);\n      }\n      100% {\n        transform: translateX(-50%) rotate(360deg);\n      }\n    }\n    /* \n    \u4F60\u597D\u554A\uFF01\u6211\u662F\u84DD\u80D6\u5B50\uFF01\n    */\n  ",
+  n: 1,
+  time: 50,
+  styleString: '',
+  timer: undefined,
+  init: function init() {
+    player.bindEvents();
+    player.play();
+  },
+  domUI: {
+    style: document.querySelector('.style'),
+    test: document.querySelector('.test')
+  },
+  events: {
+    '#btnPause': 'pause',
+    '#btnPlay': 'play',
+    '#btnSlow': 'slow',
+    '#btnNormal': 'normal',
+    '#btnFast': 'fast'
+  },
+  bindEvents: function bindEvents() {
+    for (var key in player.events) {
+      if (player.events.hasOwnProperty(key)) {
+        document.querySelector(key).onclick = player[player.events[key]];
+      }
+    }
+  },
+  run: function run() {
+    player.n += 1;
 
-  if (n == cssString.length) {
-    console.log(111111111111);
-    window.clearInterval(timer);
-    return;
+    if (player.n == player.cssString.length) {
+      player.pause();
+      return;
+    }
+
+    if (player.cssString[player.n] === '\n') {
+      player.styleString += '<br>';
+    } else if (player.cssString[player.n] === ' ') {
+      player.styleString += '&nbsp;';
+    } else {
+      player.styleString += player.cssString[player.n];
+    }
+
+    player.domUI.test.innerHTML = player.styleString;
+    player.domUI.style.innerHTML = player.cssString.substring(0, player.n);
+    player.domUI.test.scrollTop = player.domUI.test.scrollHeight;
+  },
+  play: function play() {
+    player.pause();
+    player.timer = setInterval(player.run, player.time);
+  },
+  pause: function pause() {
+    window.clearInterval(player.timer);
+  },
+  slow: function slow() {
+    player.pause();
+    player.time = 200;
+    player.play();
+  },
+  normal: function normal() {
+    player.pause();
+    player.time = 50;
+    player.play();
+  },
+  fast: function fast() {
+    player.pause();
+    player.time = 0;
+    player.play();
   }
-
-  if (cssString[n] === '\n') {
-    styleString += '<br>';
-  } else if (cssString[n] === ' ') {
-    styleString += '&nbsp;';
-  } else {
-    styleString += cssString[n];
-  }
-
-  test.innerHTML = styleString;
-  style.innerHTML = cssString.substring(0, n);
-  test.scrollTop = test.scrollHeight;
-}, 0);
+};
+player.init();
 },{}],"../../../AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -172,7 +218,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53779" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59680" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
