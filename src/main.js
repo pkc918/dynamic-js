@@ -1,6 +1,3 @@
-const style = document.querySelector('.style')
-const test = document.querySelector('.test')
-
 const player = {
   cssString: `
     /* 
@@ -242,8 +239,12 @@ const player = {
   styleString: '',
   timer: undefined,
   init: () => {
-    player.play()
     player.bindEvents()
+    player.play()
+  },
+  domUI:{
+    style: document.querySelector('.style'),
+    test: document.querySelector('.test')
   },
   events:{
     '#btnPause':'pause',
@@ -272,9 +273,9 @@ const player = {
     } else{
       player.styleString += player.cssString[player.n]
     }
-    test.innerHTML = player.styleString
-    style.innerHTML = player.cssString.substring(0,player.n)
-    test.scrollTop = test.scrollHeight
+    player.domUI.test.innerHTML = player.styleString
+    player.domUI.style.innerHTML = player.cssString.substring(0,player.n)
+    player.domUI.test.scrollTop = player.domUI.test.scrollHeight
   },
   play:() => {
     player.pause()
