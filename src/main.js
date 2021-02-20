@@ -262,10 +262,12 @@ const player = {
   },
   run: () => {
     player.n += 1
-    if(player.n == player.cssString.length){
+
+    if(parseInt(player.n) === player.cssString.length){
       player.pause()
       return
     }
+
     if(player.cssString[player.n] === '\n'){
       player.styleString += '<br>'
     } else if(player.cssString[player.n] === ' '){
@@ -273,6 +275,7 @@ const player = {
     } else{
       player.styleString += player.cssString[player.n]
     }
+
     player.domUI.test.innerHTML = player.styleString
     player.domUI.style.innerHTML = player.cssString.substring(0,player.n)
     player.domUI.test.scrollTop = player.domUI.test.scrollHeight
